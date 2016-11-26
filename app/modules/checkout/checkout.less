@@ -1,0 +1,76 @@
+@import '~style/variables.less';
+@import '~style/mixin.less';
+
+#check-out {
+	.check-out-title {
+		font-size: @font-md;
+		margin-bottom: 10px;
+	}
+	.ad-item {
+		display: table;
+    	width: 100%;
+    	color: @color-dark-blue;
+    	margin-left: auto;
+    	margin-right: auto;
+    	margin-bottom: 10px;
+    	min-height: 110px;
+		padding: 5px;
+		border: 1px solid @color-gray;
+
+		.ad-name {
+			display: table-cell;
+			background: rgba(96,121,141,0.15);
+			padding: 15px;
+			max-width: 15%;
+			width: 130px;
+			vertical-align: middle;
+			text-align: center;
+			
+			&.classic {
+				color: @color-white;
+				background: @color-orange;
+			}
+
+			&.standout {
+				color: @color-white;
+				background: @color-green;
+			}
+			
+			&.premium {
+				color: @color-white;
+				background: @color-blue;
+			}
+
+			span {
+				font-size: @font-sm;
+				font-weight: bold;
+			}
+		}
+
+		.ad-desc {
+			display: table-cell;
+			padding-left: 15px;
+
+			ul {
+				list-style-type: none;
+				padding: 0px;
+			}
+			.quantity-box {
+				.qty-input {
+					max-width: 15%;
+				    text-align: center;
+				    border: 1px solid @color-gray;
+				}
+			}
+		}
+
+		.ad-price {
+			display: table-cell;
+			font-size: @font-md;
+			width: 20%;
+			text-align: right;
+		}
+	}
+
+	
+}
