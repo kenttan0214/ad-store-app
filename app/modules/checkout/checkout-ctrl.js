@@ -21,8 +21,7 @@ module.exports = function(app) {
     		console.log(res);
     	}
 
-        function updateSubtotal(ad) {
-            var advertisementList = $scope.advertisementList;
+        function updateSubtotal(ad, advertisementList) {
             if (ad.qty >= 0) {
                 ad.subTotal = priceCalculator.adSubTotal(ad);
                 $scope.subTotal = priceCalculator.allAdSubtotal(advertisementList);

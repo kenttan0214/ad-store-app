@@ -1,26 +1,31 @@
 'use strict';
 module.exports = function(app) {
     app.factory('priceCalculator', [function() {
+        var fixedDecimal = 2;
+
+        function toFixedDecimal(value) {
+            return parseFloat(value).toFixed(fixedDecimal);
+        }
+
         return {
             adSubTotal: function(ad, privilegedPrice) {
-                var subtotal = 0;
+                var subTotal = 0.00;
                 if (privilegedPrice) {
 
                 } else {
-                    subtotal = ad.stdPrice * ad.qty;
+                    subTotal = ad.stdPrice * ad.qty;
                 }
-                return subtotal;
+                return toFixedDecimal(subTotal);
             },
             allAdSubtotal: function(advertisementList) {
-                var subTotal = 0;
+                var subTotal = 0.00;
 
                 for (var ad of advertisementList) {
-                    if (ad.qty >= 0 && ad.subTotal >=0) {
-                        subTotal += ad.subTotal;
+                    if (ad.qty >= 0 && ad.subTotal) {
+                        subTotal += parseFloat(ad.subTotal);                        
                     }
                 }
-
-                return subTotal;
+                return toFixedDecimal(subTotal);
             }
         };
     }]);
