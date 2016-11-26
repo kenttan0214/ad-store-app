@@ -13,7 +13,7 @@
     	margin-left: auto;
     	margin-right: auto;
     	margin-bottom: 10px;
-    	min-height: 110px;
+    	min-height: 125px;
 		padding: 5px;
 		border: 1px solid @color-gray;
 
@@ -57,6 +57,7 @@
 			}
 			.quantity-box {
 				.qty-input {
+					display: inline-block;
 					max-width: 15%;
 				    text-align: center;
 				    border: 1px solid @color-gray;
@@ -69,6 +70,29 @@
 			font-size: @font-md;
 			width: 20%;
 			text-align: right;
+
+			.privileged-desc {
+				font-size: 10px;
+			}
+		}
+	}
+
+	.check-out-box {
+		.order-summary-title {
+			font-weight: bold;
+		}
+
+		.summary-box {
+			margin-top: 15px;
+
+			.summary-box-value {
+				text-align: right;
+			}
+
+			.cust-name-input {
+				display: inline-block;
+				max-width: 50%;
+			}
 		}
 	}
 

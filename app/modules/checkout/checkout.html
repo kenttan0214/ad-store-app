@@ -18,7 +18,7 @@
 
 					<span class="quantity-box">
 						<span class="qty-lable">Qty: </span>
-						<input class="qty-input" type="number" name="qty">
+						<input class="form-control qty-input" type="number" name="qty">
 					</span>
 				</div>
 
@@ -40,12 +40,15 @@
 
 					<span class="quantity-box">
 						<span class="qty-lable">Qty: </span>
-						<input class="qty-input" type="number" name="qty">
+						<input class="form-control qty-input" type="number" name="qty">
 					</span>
 				</div>
 
 				<div class="ad-price">
-					$ 123333.00
+					<span>$ 123333.00</span>
+					<div class="privileged-desc">
+						special price $299.99 per ad
+					</div>
 				</div>
 			</div>
 			<div class="ad-item">
@@ -63,7 +66,7 @@
 
 					<span class="quantity-box">
 						<span class="qty-lable">Qty: </span>
-						<input class="qty-input" type="number" name="qty">
+						<input class="form-control qty-input" type="number" name="qty">
 					</span>
 				</div>
 
@@ -71,14 +74,31 @@
 					$ 123333.00
 				</div>
 			</div>
-
 		</div>
 		
 	</div>
 
 	<div class="col-md-4">
 		<div class="check-out-box content-card">
-			check out item list
+			<div class="order-summary-title">
+				Order Summary
+			</div>
+
+			<div class="summary-box row">
+				<div class="col-md-6 summary-box-label">Subtotal</div>
+				<div class="col-md-6 summary-box-value">$123.33</div>
+			</div>
+
+			<div class="summary-box row">
+				<div class="col-md-12">
+					<span>
+						<input type="text" class="form-control cust-name-input" placeholder="Customer Name">
+					</span>
+					<span>
+						<button type="button" class="btn btn-default">Apply</button>
+					</span>
+				</div>
+			</div>
 		</div>
 	</div>
 
