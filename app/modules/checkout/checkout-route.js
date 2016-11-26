@@ -19,7 +19,8 @@ app.config(['$stateProvider', function($stateProvider) {
                     return $q(function(resolve) {
                         require.ensure([], function() {
                             lazyLoad.bootstrapComponents(resolve, [
-                                require('./checkout-ctrl')(app)
+                                require('./checkout-ctrl')(app),
+                                require('./checkout-price-calculator')(app)
                             ]);
                         });
                     });

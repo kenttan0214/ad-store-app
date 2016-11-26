@@ -43,7 +43,8 @@ var webpackConfig = {
             assets: path.resolve("app/assets"),
             style: path.join(__dirname, "app/assets/less"),
             components: path.resolve("app/components"),
-            services: path.resolve("app/components/common-services")
+            services: path.resolve("app/components/common-services"),
+            env: path.resolve("app/env")
         }
     },
     target: 'web'

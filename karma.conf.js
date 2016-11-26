@@ -16,6 +16,7 @@ module.exports = function(config) {
         // list of files / patterns to load in the browser
         files: [
             'node_modules/angular/angular.js',
+            'node_modules/angular-resource/angular-resource.min.js',
             'node_modules/angular-mocks/angular-mocks.js',
             { pattern: 'test/test-context.js',watched: false }
         ],
@@ -24,6 +25,9 @@ module.exports = function(config) {
             resolve: webpackConfig.resolve,
             module: {
                 loaders: [].concat(webpackConfig.module.loaders)
+            },
+            resolve: {
+                alias: webpackConfig.resolve.alias
             },
             watch: true
         },
