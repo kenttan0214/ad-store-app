@@ -7,6 +7,7 @@ module.exports = function(app) {
     function($scope, advertisementServices, priceCalculator) {
     	$scope.advertisementList = [];
         $scope.updateSubtotal = updateSubtotal;
+        $scope.subTotal = 0;
 
     	advertisementServices.getAdvertisementList().then(
     		getAdListSuccess, getAdListFailed
@@ -21,8 +22,10 @@ module.exports = function(app) {
     	}
 
         function updateSubtotal(ad) {
-            if (ad.qty > 0) {
+            var advertisementList = $scope.advertisementList;
+            if (ad.qty >= 0) {
                 ad.subTotal = priceCalculator.adSubTotal(ad);
+                $scope.subTotal = priceCalculator.allAdSubtotal(advertisementList);
             }
         }
     }]);

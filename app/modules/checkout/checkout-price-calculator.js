@@ -9,8 +9,18 @@ module.exports = function(app) {
                 } else {
                     subtotal = ad.stdPrice * ad.qty;
                 }
-
                 return subtotal;
+            },
+            allAdSubtotal: function(advertisementList) {
+                var subTotal = 0;
+
+                for (var ad of advertisementList) {
+                    if (ad.qty >= 0 && ad.subTotal >=0) {
+                        subTotal += ad.subTotal;
+                    }
+                }
+
+                return subTotal;
             }
         };
     }]);
