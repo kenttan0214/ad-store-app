@@ -16,7 +16,7 @@ module.exports = function(app) {
             }
 
             return {
-                getPrivilegedPriceByCustId: function(queryParams) {
+                getPrivilegedPriceByCustName: function(queryParams) {
                     var resource = getPrivilegedPriceResource();
                     var cb = serviceBase.getCB();
 
