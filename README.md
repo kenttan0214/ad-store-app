@@ -8,3 +8,6 @@
 * run `npm start`
 ** This will start local environment for you
 * navigate to `localhost:9876`
+
+* Live Demo
+http://adstore-kenttan.rhcloud.com

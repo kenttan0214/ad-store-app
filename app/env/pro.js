@@ -1,5 +1,5 @@
 module.exports = {
 	environment: 'pro',
-	apiUrl: "http://localhost:3000/services/",
-	publicPath: "http://localhost:9876/"
+	apiUrl: "http://adstore-kenttan.rhcloud.com/services/",
+	publicPath: "http://adstore-kenttan.rhcloud.com/"
 }; 
