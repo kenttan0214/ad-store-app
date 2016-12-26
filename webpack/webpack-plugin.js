@@ -72,9 +72,7 @@ module.exports = function(appEnv) {
                 warnings: false
             },
             comments: false,
-            options: {
-                sourceMap: false
-            }
+            sourceMap: true
         }));
     } else {
         plugins.push(new CssSourcemapPlugin());

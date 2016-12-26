@@ -1,7 +1,7 @@
 'use strict';
 module.exports = {
     jquery: ['jquery'],
-    bootstrap: ['bootstrap', 'bootstrap-webpack'],
+    bootstrap: ['bootstrap-loader'],
     angular: ['angular'],
     angularDependency: [
         'angular-resource',
